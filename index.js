@@ -1,7 +1,7 @@
 var mongoFactory = require('mongo-factory');
 
 var connectionStringFrom = 'mongodb://127.0.0.1:27017/noserv';
-var connectionStringTo = 'mongodb://127.0.0.1:27017/noservdb3';
+var connectionStringTo = 'mongodb://127.0.0.1:27017/noservdb';
 
 var bcrypt = require('bcrypt');
 
@@ -18,7 +18,7 @@ mongoFactory.getConnection(connectionStringFrom).then(function(dbFrom) {
 
                 delete value._id;
 
-                collectionToApps.findOne({_objectId : value._objectId}, function(err, doc) {
+                collectionToApps.findOne({objectId : value.objectId}, function(err, doc) {
 
                     if(!doc)
                         collectionToApps.insert(value, function(){});
