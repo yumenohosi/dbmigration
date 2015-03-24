@@ -1,0 +1,9 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "dependencies": {
+    "bcrypt": "^0.8.1",
+    "mongo-factory": "^0.6.0",
+    "mongodb": "^2.0.23"
+  }
+}
